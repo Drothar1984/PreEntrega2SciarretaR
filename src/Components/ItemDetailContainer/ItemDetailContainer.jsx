@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react'
 //importamos los hooks para acceder a los parametros de la URL
 import { useParams } from 'react-router-dom'
-//archivo productos para usar
-import arrayProductos from '../Json/arrayProductos.json'
+//al nutrir la funcion de firebase importamos desde alli
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 
@@ -16,16 +16,15 @@ const ItemDetailContainer = () => {
   
       //representamos una asincronia - creando una promesa que se resuelva - con posibles escenarios
       useEffect(() => {        
-        //dentro de promesa instancia una nueva promesa
-        const promesa = new Promise((resolve) => {
-            setTimeout(() => {
-                resolve(arrayProductos.find(item=> item.id === parseInt(id)))
-            }, 2000);
-        });
-        promesa.then((data)=>{
-            setItem(data)
-        })
-      }, [id])
+       //inicializamos "firestore" - pero como lo vamos utilizar lo almacenamos en una variable
+        const queryDb = getFirestore();
+        //indicamos a traves de queryDoc que es lo que queremos que traiga (debiando pasar dos argumentos 1º que se inicialice  y 2º de donde)
+        const queryDoc = doc(queryDb, 'products',id)
+        getDoc(queryDoc).then((res) => 
+        setItem({id: res.id, ...res.data()}))
+        
+
+    }, [id])
       
       return (
   

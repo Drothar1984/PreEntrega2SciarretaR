@@ -11,8 +11,10 @@ import NavBar from './Components/NavBar/NavBar'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 //pestañas principales
-import CarWidget from './Components/CarWidget/CarWidget'
+import Cart from './Components/Cart/Cart'
+import {CheckOut} from './Components/CheckOut/CheckOut.jsx'
 import Error from './Components/Error'
+import CartProvider from './Components/Context/CartContext'
 
 function App() {  
 
@@ -20,6 +22,8 @@ function App() {
         
     <div className='App'>
       <BrowserRouter>
+
+      <CartProvider>
 
         <NavBar/>
 
@@ -30,13 +34,16 @@ function App() {
             <Route path= {'/categoria/:id'} element={ <ItemListContainer/>}/>
             <Route path= {'/item/:id'} element={ <ItemDetailContainer/>}/>            
 
-            <Route path= {'/carwidget'} element={ <CarWidget/>}/>
+            <Route path= {'/cart'} element={ <Cart/>}/>
+            <Route path= {'/checkout'} element={ <CheckOut/>}/>
 
             <Route path= {'*'} element={ <Error />}/>
 
           </Routes>
 
-        </BrowserRouter>
+      </CartProvider>
+
+      </BrowserRouter>
       
     </div>
       

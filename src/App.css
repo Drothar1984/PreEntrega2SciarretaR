@@ -19,6 +19,141 @@ body{
 
 }
 
+/*contenedor reutilizable*/
+.ProductCardReutilizable{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around; /* Puedes ajustar según tus preferencias */
+  margin: 20px;
+  max-width: 300px;
+  max-height: auto;
+  min-height: 200px;
+  background-color: white;
+  border: 1px solid #ddd; /* Añade un borde sutil */
+  padding: 20px;
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+
+
+.ProductCardReutilizable-cart{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around; /* Puedes ajustar según tus preferencias */
+  margin: 20px;
+  max-width: auto;
+  max-height: auto;
+  min-height: 200px;
+  background-color: white;
+  border: 1px solid #ddd; /* Añade un borde sutil */
+  padding: 20px;
+  width: auto; /* Ajusta el ancho según tus necesidades */ 
+  
+}
+
+.checkout-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-form-datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+  border: black 2px solid;
+}
+
+
+.checkout-form-datos > div {
+  margin-bottom: 10px; /* Espaciado entre elementos */
+}
+
+.lab-check {
+  margin-bottom: 5px; /* Espaciado entre la etiqueta y el input */
+}
+
+.input-check {
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+.enviar {
+  margin-top: 10px; /* Espaciado superior para el botón */
+}
+
+.checkout-card{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: space-around; /* Puedes ajustar según tus preferencias */
+  margin: 20px;
+  max-width: 300px;
+  max-height: auto;
+  min-height: 200px;
+  background-color: white;
+  border: 1px solid #ddd; /* Añade un borde sutil */
+  padding: 20px;
+  width: auto; /* Ajusta el ancho según tus necesidades */ 
+  
+}
+
+.ProductCardReutilizable-cart-general{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around; /* Puedes ajustar según tus preferencias */
+  margin: 20px 200px 20px 200px;
+  max-width: auto;
+  max-height: auto;
+  min-height: 200px;
+  background-color: white;
+  border: 1px solid #ddd; /* Añade un borde sutil */
+  padding: 20px;
+  width: auto; /* Ajusta el ancho según tus necesidades */ 
+}
+
+/*card individual*/
+
+.itemCart{
+  display: flex;
+  height: auto;
+  width: auto;
+  border: black 2px solid;
+  padding: 15px;
+  margin: 5px;
+}
+
+/* imagen de la card */
+
+.itemCart-img{
+  max-width: 200px;
+  max-height: 200px;
+  
+}
+
+/*card individual*/
+
+.Cart-final{
+  display: flex;
+  height: auto;
+  width: auto;
+  justify-content:center;
+  padding: 15px;
+  margin: 5px;
+}
+
+.btn-total{
+
+  margin: 10px;
+
+}
 
 .logo {
   height: 6em;
@@ -118,15 +253,6 @@ body{
 }
 
 
-/* Agrega estilos para las cards */
-.ProductCardReutilizable {
-  background-color: white;
-  border: 1px solid #ddd; /* Añade un borde sutil */
-  padding: 20px;
-  width: 200px; /* Ajusta el ancho según tus necesidades */
-  
-}
-
 .ProductCardReutilizable img {
   max-width: 100%; /* Asegura que la imagen no exceda el ancho de la card */
 }
@@ -141,6 +267,14 @@ body{
   margin-top: 20px;
   align-items: center;
   justify-content: center;
+}
+
+.cont-contador-botones{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 10px;
 }
 
 /*plantilla ItemDetail*/

@@ -12,14 +12,14 @@ const Item = ({item}) => {
 
         <div className="ProductCardReutilizable" style={{ maxWidth: '300px', maxHeight: 'auto', minWidth: '200px', minHeight: '200px'}}>
 
-            <img src={item.imagen} style={{ maxWidth: '200px', maxHeight: '200px' }} alt={item.nombre}/>
+            <img src={item.img} style={{ maxWidth: '200px', maxHeight: '200px' }} alt={item.title}/>
             
             <div>
 
-                <h4>{item.nombre}</h4>                            
+                <h4>{item.title}</h4>                            
                 
-                <p>Precio $ {item.precio}</p>                
-                <p>Tipo: {item.categoria}</p>
+                <p>Precio $ {item.price}</p>                
+                <p>Tipo: {item.categoryId}</p>
                 <button>Ver</button>
 
             </div>                

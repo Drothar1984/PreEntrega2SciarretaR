@@ -35,7 +35,7 @@ function NavBar() {
       </ul>
       <div className='NavBar-Carrito'>
         <Suscripcion/>
-        <Link to="/carwidget" className='carwidget'><CarWidget/></Link>    
+        <Link to="/cart" className='cart'><CarWidget/></Link>    
       </div>
     </div>
   )
